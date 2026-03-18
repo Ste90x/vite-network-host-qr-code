@@ -2,20 +2,6 @@
 
 Show Vite network URLs as terminal QR codes when the dev or preview server is started with `--host`.
 
-## Install locally
-
-In another local Vite project:
-
-```json
-{
-  "devDependencies": {
-    "vite-plugin-network-qr": "file:../vite-network-host-qr-code"
-  }
-}
-```
-
-Then install dependencies in that app with Bun.
-
 ## Usage
 
 ```ts
@@ -34,24 +20,6 @@ bunx vite --host
 ```
 
 Without `--host`, Vite usually has no network URL to display, so the plugin prints nothing extra.
-
-## Example app
-
-This repo includes a sample app in `example/` that already uses the local plugin.
-
-```sh
-cd example
-bun install
-bun run dev -- --host
-```
-
-You should see the normal Vite network URL plus a QR code in the terminal.
-
-Or launch the example from the repo root:
-
-```sh
-bun run example
-```
 
 ## Options
 
