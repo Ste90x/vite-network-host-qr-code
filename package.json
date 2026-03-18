@@ -1,0 +1,39 @@
+{
+  "name": "vite-plugin-network-qr",
+  "version": "0.0.0",
+  "description": "Show Vite network URLs as terminal QR codes when host mode is enabled.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "example": "cd example && bun run dev -- --host"
+  },
+  "packageManager": "bun@1.3.10",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "qr",
+    "terminal"
+  ],
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vite": "^8.0.0"
+  }
+}
